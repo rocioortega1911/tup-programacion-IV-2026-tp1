@@ -1,0 +1,26 @@
+### Consultar un rectángulo
+GET http://localhost:3000/rectangulos?base=10&altura=5
+
+
+### Consultar un cuadrado
+GET http://localhost:3000/rectangulos?base=5&altura=5
+
+
+### Rectángulo con otros valores
+GET http://localhost:3000/rectangulos?base=8&altura=3
+
+
+### Error: base igual a cero
+GET http://localhost:3000/rectangulos?base=0&altura=5
+
+
+### Error: altura negativa
+GET http://localhost:3000/rectangulos?base=10&altura=-2
+
+
+### Error: base no numérica
+GET http://localhost:3000/rectangulos?base=hola&altura=5
+
+
+### Error: altura no numérica
+GET http://localhost:3000/rectangulos?base=10&altura=hola
