@@ -1,0 +1,58 @@
+### Ver todas las tareas
+GET http://localhost:3002/tareas
+
+
+### Ver tareas completadas
+GET http://localhost:3002/tareas/completadas
+
+
+### Ver tareas pendientes
+GET http://localhost:3002/tareas/pendientes
+
+
+### Crear una tarea
+POST http://localhost:3002/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Hacer TP1",
+    "completada": false
+}
+
+
+### Intentar crear una tarea repetida
+POST http://localhost:3002/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Hacer TP1",
+    "completada": false
+}
+
+
+### Intentar crear una tarea sin estado correcto
+POST http://localhost:3002/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Ir al gimnasio",
+    "completada": "si"
+}
+
+
+### Modificar una tarea
+PUT http://localhost:3002/tareas/Hacer%20TP1
+Content-Type: application/json
+
+{
+    "nombre": "Hacer TP1",
+    "completada": true
+}
+
+
+### Eliminar una tarea
+DELETE http://localhost:3002/tareas/Hacer%20TP1
+
+
+### Consultar tarea eliminada
+GET http://localhost:3002/tareas/Hacer%20TP1
